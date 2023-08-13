@@ -22,7 +22,8 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(logger('dev'))
-// Sessions
+
+// Sessions what keeps users logged in through out different pages
 app.use(
     session({
       secret: 'keyboard cat',
