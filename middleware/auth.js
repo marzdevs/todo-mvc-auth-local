@@ -1,3 +1,4 @@
+// if authenticated good, move to controller else redirect to / (main page)
 module.exports = {
     ensureAuth: function (req, res, next) {
       if (req.isAuthenticated()) {

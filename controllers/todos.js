@@ -1,6 +1,8 @@
 const Todo = require('../models/Todo')
 
 module.exports = {
+    // todosController.getTodos from routes Todo.js
+    // lets you get the users todos only
     getTodos: async (req,res)=>{
         console.log(req.user)
         try{

@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(logger('dev'))
 
-// Sessions what keeps users logged in through out different pages
+// Sessions what keeps users logged in through out different browsers
 app.use(
     session({
       secret: 'keyboard cat',
@@ -38,7 +38,8 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(flash())
-  
+
+// making any request use the two below
 app.use('/', mainRoutes)
 app.use('/todos', todoRoutes)
  
